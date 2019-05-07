@@ -1,0 +1,23 @@
+body {
+	color: #282828;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+table, th, td {
+	background-color: #f8f8f8;
+	border: 1px solid black;
+	text-align: center;
+	min-width: 12rem;
+}
+
+th {
+	background-color: #446633;
+	color: #f8f8f8;
+}
+
+table {
+	border-collapse: collapse;
+}
