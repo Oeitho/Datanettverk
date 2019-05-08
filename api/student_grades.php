@@ -1,7 +1,7 @@
 <?php
 	if (isset($_GET["student_name"])) {
 		ini_set('display_errors', 0);
-		$db = new mysqli("localhost", "root", "", "student_grades");
+		$db = new mysqli("10.10.12.63", "dats20", "finish shoe took", "student_grades");
 		if ($db->connect_errno) {
 			die($db->connect_error);
 			http_response_code(500);

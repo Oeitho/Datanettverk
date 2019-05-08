@@ -1,19 +1,3 @@
-<?php
-$db = new mysqli("localhost", "root", "");
-$sql = "CREATE DATABASE IF NOT EXISTS student_grades";
-$db->query($sql);
-
-$db->close();
-
-
-$db = new mysqli("localhost", "root", "", "student_grades");
-$location = 'student_grades.sql';
-
-$commands = file_get_contents($location); 
-$db->multi_query($commands);
-
-$db->close();
-?>
 <!DOCTYPE html>
 
 <html>
@@ -35,7 +19,7 @@ $db->close();
 		<br />
 		<table id="student_grades">
 		<?php
-			$db = new mysqli("localhost", "root", "", "student_grades");
+			$db = new mysqli("10.10.12.63", "dats20", "finish shoe took", "student_grades");
 			if ($db->connect_errno) {
 				die($db->connect_error);
 				http_response_code(500);
