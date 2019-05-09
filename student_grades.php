@@ -1,3 +1,6 @@
+<?php
+	require_once './connect_to_db.php';
+?>
 <!DOCTYPE html>
 
 <html>
@@ -19,11 +22,7 @@
 		<br />
 		<table id="student_grades">
 		<?php
-			$db = new mysqli("10.10.12.63", "dats20", "finish shoe took", "student_grades");
-			if ($db->connect_errno) {
-				die($db->connect_error);
-				http_response_code(500);
-			}
+			$db = connect_to_db();
 			
 			$sql = "SELECT name, subject, grade FROM grades, students Where grades.studentid = students.studentid";
 			$result = $db->query($sql);
